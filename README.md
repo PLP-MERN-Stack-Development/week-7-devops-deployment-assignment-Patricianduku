@@ -1,78 +1,68 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19929933&assignment_repo_type=AssignmentRepo)
-# Deployment and DevOps for MERN Applications
+# MERN Stack Deployment & DevOps Assignment
 
-This assignment focuses on deploying a full MERN stack application to production, implementing CI/CD pipelines, and setting up monitoring for your application.
+## 🌐 Live Demo
 
-## Assignment Overview
+- **Frontend:** [https://your-frontend-url.vercel.app](https://your-frontend-url.vercel.app)
+- **Backend API:** [https://your-backend-url.onrender.com](https://your-backend-url.onrender.com)
 
-You will:
-1. Prepare your MERN application for production deployment
-2. Deploy the backend to a cloud platform
-3. Deploy the frontend to a static hosting service
-4. Set up CI/CD pipelines with GitHub Actions
-5. Implement monitoring and maintenance strategies
+## 🚀 Project Overview
 
-## Getting Started
+This project demonstrates a production-ready MERN stack application, deployed with CI/CD pipelines and cloud services.
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Follow the setup instructions in the `Week7-Assignment.md` file
-4. Use the provided templates and configuration files as a starting point
+## 🛠️ Tech Stack
 
-## Files Included
+- **Frontend:** React (Vite), Tailwind CSS, Vercel
+- **Backend:** Node.js, Express, MongoDB Atlas, Render
+- **CI/CD:** GitHub Actions
 
-- `Week7-Assignment.md`: Detailed assignment instructions
-- `.github/workflows/`: GitHub Actions workflow templates
-- `deployment/`: Deployment configuration files and scripts
-- `.env.example`: Example environment variable templates
-- `monitoring/`: Monitoring configuration examples
+## ⚙️ CI/CD Pipeline
 
-## Requirements
+- Automated with GitHub Actions:  
+  - Lints, tests, and builds both client and server
+  - Deploys backend to Render and frontend to Vercel
+  - Runs health checks after deployment
 
-- A completed MERN stack application from previous weeks
-- Accounts on the following services:
-  - GitHub
-  - MongoDB Atlas
-  - Render, Railway, or Heroku (for backend)
-  - Vercel, Netlify, or GitHub Pages (for frontend)
-- Basic understanding of CI/CD concepts
+**Example pipeline screenshot:**  
+![CI/CD Pipeline](./path-to-your-screenshot.png)
 
-## Deployment Platforms
+## 📦 Deployment Instructions
 
-### Backend Deployment Options
-- **Render**: Easy to use, free tier available
-- **Railway**: Developer-friendly, generous free tier
-- **Heroku**: Well-established, extensive documentation
+1. **Backend:**  
+   - Deployed to Render from the `server` directory
+   - Environment variables set in Render dashboard
 
-### Frontend Deployment Options
-- **Vercel**: Optimized for React apps, easy integration
-- **Netlify**: Great for static sites, good CI/CD
-- **GitHub Pages**: Free, integrated with GitHub
+2. **Frontend:**  
+   - Deployed to Vercel from the `client` directory
+   - Environment variable `VITE_API_URL` set to backend URL
 
-## CI/CD Pipeline
+## 🔑 Environment Variables
 
-The assignment includes templates for setting up GitHub Actions workflows:
-- `frontend-ci.yml`: Tests and builds the React application
-- `backend-ci.yml`: Tests the Express.js backend
-- `frontend-cd.yml`: Deploys the frontend to your chosen platform
-- `backend-cd.yml`: Deploys the backend to your chosen platform
+See [`env.example`](./env.example) for all required variables.  
+**Important:** Never commit your real `.env` file!
 
-## Submission
+## 🖥️ Running Locally
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+```bash
+pnpm install
+cd server && pnpm install
+cd ../client && pnpm install
+pnpm dev
+```
+- The app will run with the backend on [http://localhost:5000](http://localhost:5000) and frontend on [http://localhost:5173](http://localhost:5173) (Vite default).
 
-1. Complete all deployment tasks
-2. Set up CI/CD pipelines with GitHub Actions
-3. Deploy both frontend and backend to production
-4. Document your deployment process in the README.md
-5. Include screenshots of your CI/CD pipeline in action
-6. Add URLs to your deployed applications
+## 📊 Monitoring
 
-## Resources
+- (Describe any monitoring tools you set up, e.g., health check endpoints, Sentry, etc.)
 
-- [GitHub Actions Documentation](https://docs.github.com/en/actions)
-- [MongoDB Atlas Documentation](https://docs.atlas.mongodb.com/)
-- [Render Documentation](https://render.com/docs)
-- [Railway Documentation](https://docs.railway.app/)
-- [Vercel Documentation](https://vercel.com/docs)
-- [Netlify Documentation](https://docs.netlify.com/) 
+## 📸 Screenshots
+
+- Add screenshots of your deployed app and CI/CD pipeline here.
+
+---
+
+## 📚 Resources
+
+- [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
+- [Render](https://render.com/)
+- [Vercel](https://vercel.com/)
+- [GitHub Actions](https://docs.github.com/en/actions) 
