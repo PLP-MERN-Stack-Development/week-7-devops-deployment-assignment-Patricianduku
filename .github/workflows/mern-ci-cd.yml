@@ -25,8 +25,11 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-          cache: 'npm'
-          cache-dependency-path: './server/package.json'
+          cache: 'pnpm'
+          cache-dependency-path: './server/pnpm-lock.yaml'
+
+      - name: Install pnpm
+        run: npm install -g pnpm
       
       - name: Install backend dependencies
         run: |
@@ -63,8 +66,11 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-          cache: 'npm'
-          cache-dependency-path: './client/package.json'
+          cache: 'pnpm'
+          cache-dependency-path: './client/pnpm-lock.yaml'
+
+      - name: Install pnpm
+        run: npm install -g pnpm
       
       - name: Install frontend dependencies
         run: |
