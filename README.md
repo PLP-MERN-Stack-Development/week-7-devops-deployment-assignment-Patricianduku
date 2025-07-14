@@ -66,3 +66,5 @@ npm dev
 - [Render](https://render.com/)
 - [Vercel](https://vercel.com/)
 - [GitHub Actions](https://docs.github.com/en/actions) 
+
+<!-- Trigger workflow: minor README update for CI/CD rerun --> 
