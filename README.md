@@ -43,10 +43,10 @@ See [`env.example`](./env.example) for all required variables.
 ## 🖥️ Running Locally
 
 ```bash
-pnpm install
-cd server && pnpm install
-cd ../client && pnpm install
-pnpm dev
+npm install
+cd server && npm install
+cd ../client && npm install
+npm dev
 ```
 - The app will run with the backend on [http://localhost:5000](http://localhost:5000) and frontend on [http://localhost:5173](http://localhost:5173) (Vite default).
 
