@@ -23,7 +23,7 @@ This project demonstrates a production-ready MERN stack application, deployed wi
   - Runs health checks after deployment
 
 **Example pipeline screenshot:**  
-![CI/CD Pipeline](./path-to-your-screenshot.png)
+![CI/CD Pipeline](screenshots foder in the directory)
 
 ## 📦 Deployment Instructions
 
@@ -52,11 +52,11 @@ npm dev
 
 ## 📊 Monitoring
 
-- (Describe any monitoring tools you set up, e.g., health check endpoints, Sentry, etc.)
+- health check endpoints - https://week-7-devops-deployment-assignment-cwjk.onrender.com/health
 
 ## 📸 Screenshots
 
-- Add screenshots of your deployed app and CI/CD pipeline here.
+- Available in the screenshots folder
 
 ---
 
