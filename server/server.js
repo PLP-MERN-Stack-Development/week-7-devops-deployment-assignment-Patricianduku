@@ -10,18 +10,18 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Health check endpoint FIRST
+// Health check endpoint
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'OK' });
 });
 
-// Security middleware
+// Security headers
 app.use(helmet({
   contentSecurityPolicy: {
     directives: {
       defaultSrc: ["'self'"],
-      styleSrc: ["'self'", "'unsafe-inline'"],
-      scriptSrc: ["'self'"],
+      styleSrc: ["'self'", "'unsafe-inline'", "https:"],
+      scriptSrc: ["'self'", "'unsafe-inline'", "https:"],
       imgSrc: ["'self'", "data:", "https:"],
     },
   },
@@ -35,34 +35,25 @@ const limiter = rateLimit({
 });
 app.use('/api/', limiter);
 
-// Compression middleware
+// Compression
 app.use(compression());
 
-// Logging middleware
-if (process.env.NODE_ENV === 'production') {
-  app.use(morgan('combined'));
-} else {
-  app.use(morgan('dev'));
-}
+// Logging
+app.use(morgan(process.env.NODE_ENV === 'production' ? 'combined' : 'dev'));
 
-// ✅ UPDATED CORS CONFIG
-const allowedOrigins = [
-  'http://localhost:3000',
-  'https://client-deployment-patricia-cykewysbb-terrys-projects-27961303.vercel.app'
-];
+// ✅ CORS setup
+const corsOptions = {
+  origin: [
+    process.env.FRONTEND_URL, // from .env
+    'http://localhost:3000'
+  ],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  optionsSuccessStatus: 200
+};
+app.use(cors(corsOptions));
 
-app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  credentials: true
-}));
-
-// Body parsing
+// Body parser
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
@@ -71,7 +62,7 @@ app.use('/api/users', require('./routes/users'));
 app.use('/api/posts', require('./routes/posts'));
 app.use('/api/auth', require('./routes/auth'));
 
-// Error handling
+// Error handler
 app.use((err, req, res, next) => {
   console.error(err.stack);
 
@@ -90,23 +81,20 @@ app.use((err, req, res, next) => {
 });
 
 // 404 fallback
-app.use('/', (req, res) => {
-  res.send('API is running');
-});
 app.use('*', (req, res) => {
   res.status(404).json({ error: 'Route not found' });
 });
 
-// MongoDB connection
+// DB connection
 const connectDB = async () => {
   try {
     const conn = await mongoose.connect(process.env.MONGODB_URI, {
       useNewUrlParser: true,
-      useUnifiedTopology: true,
+      useUnifiedTopology: true
     });
     console.log(`MongoDB Connected: ${conn.connection.host}`);
-  } catch (error) {
-    console.error('Database connection error:', error);
+  } catch (err) {
+    console.error('Database connection error:', err);
     process.exit(1);
   }
 };
@@ -114,7 +102,6 @@ const connectDB = async () => {
 // Start server
 const startServer = async () => {
   await connectDB();
-
   app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
     console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
@@ -122,13 +109,14 @@ const startServer = async () => {
   });
 };
 
+// Handle process exit
 process.on('SIGTERM', () => {
-  console.log('SIGTERM received, shutting down gracefully');
+  console.log('SIGTERM received. Exiting...');
   process.exit(0);
 });
 
 process.on('SIGINT', () => {
-  console.log('SIGINT received, shutting down gracefully');
+  console.log('SIGINT received. Exiting...');
   process.exit(0);
 });
 
