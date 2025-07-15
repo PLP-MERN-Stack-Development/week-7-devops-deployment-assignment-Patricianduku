@@ -1,21 +1,21 @@
 # MERN Stack Deployment & DevOps Assignment
 
-## 🌐 Live Demo
+## Live Demo
 
-- **Frontend:** [https://your-frontend-url.vercel.app](https://your-frontend-url.vercel.app)
+- **Frontend:** https://client-deployment-patricia-cykewysbb-terrys-projects-27961303.vercel.app
 - **Backend API:** https://week-7-devops-deployment-assignment-cwjk.onrender.com
 
-## 🚀 Project Overview
+## Project Overview
 
 This project demonstrates a production-ready MERN stack application, deployed with CI/CD pipelines and cloud services.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Frontend:** React (Vite), Tailwind CSS, Vercel
 - **Backend:** Node.js, Express, MongoDB Atlas, Render
 - **CI/CD:** GitHub Actions
 
-## ⚙️ CI/CD Pipeline
+## CI/CD Pipeline
 
 - Automated with GitHub Actions:  
   - Lints, tests, and builds both client and server
@@ -25,7 +25,7 @@ This project demonstrates a production-ready MERN stack application, deployed wi
 **Example pipeline screenshot:**  
 ![CI/CD Pipeline](screenshots foder in the directory)
 
-## 📦 Deployment Instructions
+## Deployment Instructions
 
 1. **Backend:**  
    - Deployed to Render from the `server` directory
@@ -35,12 +35,12 @@ This project demonstrates a production-ready MERN stack application, deployed wi
    - Deployed to Vercel from the `client` directory
    - Environment variable `VITE_API_URL` set to backend URL
 
-## 🔑 Environment Variables
+## Environment Variables
 
 See [`env.example`](./env.example) for all required variables.  
 **Important:** Never commit your real `.env` file!
 
-## 🖥️ Running Locally
+## Running Locally
 
 ```bash
 npm install
@@ -50,17 +50,17 @@ npm dev
 ```
 - The app will run with the backend on [http://localhost:5000](http://localhost:5000) and frontend on [http://localhost:5173](http://localhost:5173) (Vite default).
 
-## 📊 Monitoring
+## Monitoring
 
 - health check endpoints - https://week-7-devops-deployment-assignment-cwjk.onrender.com/health
 
-## 📸 Screenshots
+## Screenshots
 
 - Available in the screenshots folder
 
 ---
 
-## 📚 Resources
+##  Resources
 
 - [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
 - [Render](https://render.com/)
