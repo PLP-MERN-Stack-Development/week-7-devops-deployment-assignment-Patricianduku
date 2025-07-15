@@ -1,0 +1,10 @@
+{
+    "name": "MERN App",
+    "short_name": "MERN",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#317EFB",
+    "icons": []
+  }
+  
