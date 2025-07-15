@@ -1,6 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { User, Mail, Edit } from 'lucide-react';
+// import { User, Mail, Edit } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 
 const Profile = () => {
@@ -35,11 +35,11 @@ const Profile = () => {
         {/* Header */}
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-12 text-white text-center">
           <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-            <User className="h-12 w-12" />
+            {/* <User className="h-12 w-12" /> */}
           </div>
           <h1 className="text-3xl font-bold mb-2">{user.username}</h1>
           <div className="flex items-center justify-center space-x-2 text-blue-100">
-            <Mail className="h-4 w-4" />
+            {/* <Mail className="h-4 w-4" /> */}
             <span>{user.email}</span>
           </div>
         </div>
@@ -47,7 +47,7 @@ const Profile = () => {
         {/* Profile Form */}
         <div className="p-8">
           <div className="flex items-center space-x-3 mb-8">
-            <Edit className="h-6 w-6 text-gray-600" />
+            {/* <Edit className="h-6 w-6 text-gray-600" /> */}
             <h2 className="text-2xl font-bold text-gray-900">Edit Profile</h2>
           </div>
 

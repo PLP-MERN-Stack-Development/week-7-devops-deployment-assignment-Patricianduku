@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-import { PenTool, Image as ImageIcon, X } from 'lucide-react';
+// import { PenTool, Image as ImageIcon, X } from 'lucide-react';
 import { usePosts } from '../contexts/usePosts';
 import axios from 'axios';
 import toast from 'react-hot-toast';
@@ -86,7 +86,7 @@ const CreatePost = () => {
       <div className="bg-white rounded-2xl shadow-lg p-8">
         <div className="flex items-center space-x-3 mb-8">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg">
-            <PenTool className="h-6 w-6 text-white" />
+            {/* <PenTool className="h-6 w-6 text-white" /> */}
           </div>
           <h1 className="text-3xl font-bold text-gray-900">Create New Post</h1>
         </div>
@@ -132,12 +132,12 @@ const CreatePost = () => {
                   onClick={() => setFeaturedImage('')}
                   className="absolute top-2 right-2 bg-red-500 text-white p-1 rounded-full hover:bg-red-600 transition-colors"
                 >
-                  <X className="h-4 w-4" />
+                  {/* <X className="h-4 w-4" /> */}
                 </button>
               </div>
             ) : (
               <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center">
-                <ImageIcon className="h-12 w-12 text-gray-400 mx-auto mb-4" />
+                {/* <ImageIcon className="h-12 w-12 text-gray-400 mx-auto mb-4" /> */}
                 <label htmlFor="image-upload" className="cursor-pointer">
                   <span className="text-blue-600 hover:text-blue-800 font-medium">
                     {uploading ? 'Uploading...' : 'Click to upload an image'}

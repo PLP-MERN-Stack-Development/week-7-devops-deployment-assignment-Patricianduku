@@ -3,7 +3,7 @@ import { usePosts } from '../contexts/usePosts';
 
 import PostCard from '../components/posts/PostCard';
 import LoadingSpinner from '../components/common/LoadingSpinner';
-import { ChevronLeft, ChevronRight, TrendingUp, BookOpen } from 'lucide-react';
+// import { ChevronLeft, ChevronRight, TrendingUp, BookOpen } from 'lucide-react';
 
 const Home = () => {
   const { posts, loading, pagination, fetchPosts } = usePosts();
@@ -35,11 +35,11 @@ const Home = () => {
           </p>
           <div className="flex items-center justify-center space-x-8 text-blue-100">
             <div className="flex items-center space-x-2">
-              <BookOpen className="h-6 w-6" />
+              {/* <BookOpen className="h-6 w-6" /> */}
               <span className="text-lg">{pagination.totalPosts} Posts</span>
             </div>
             <div className="flex items-center space-x-2">
-              <TrendingUp className="h-6 w-6" />
+              {/* <TrendingUp className="h-6 w-6" /> */}
               <span className="text-lg">Growing Community</span>
             </div>
           </div>
@@ -57,7 +57,7 @@ const Home = () => {
 
         {posts.length === 0 ? (
           <div className="text-center py-12">
-            <BookOpen className="h-16 w-16 text-gray-400 mx-auto mb-4" />
+            {/* <BookOpen className="h-16 w-16 text-gray-400 mx-auto mb-4" /> */}
             <h3 className="text-xl font-semibold text-gray-600 mb-2">No posts found</h3>
             <p className="text-gray-500">Be the first to share your story!</p>
           </div>
@@ -77,7 +77,7 @@ const Home = () => {
               disabled={!pagination.hasPrev || loading}
               className="flex items-center space-x-1 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
             >
-              <ChevronLeft className="h-4 w-4" />
+              {/* <ChevronLeft className="h-4 w-4" /> */}
               <span>Previous</span>
             </button>
 
@@ -113,7 +113,7 @@ const Home = () => {
               className="flex items-center space-x-1 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
             >
               <span>Next</span>
-              <ChevronRight className="h-4 w-4" />
+              {/* <ChevronRight className="h-4 w-4" /> */}
             </button>
           </div>
         )}

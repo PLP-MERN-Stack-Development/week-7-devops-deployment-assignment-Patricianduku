@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-import { UserPlus, Eye, EyeOff } from 'lucide-react';
+// import { UserPlus, Eye, EyeOff } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 
 const Register = () => {
@@ -35,7 +35,7 @@ const Register = () => {
       <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-md">
         <div className="text-center mb-8">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-3 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-            <UserPlus className="h-8 w-8 text-white" />
+            {/* <UserPlus className="h-8 w-8 text-white" /> */}
           </div>
           <h1 className="text-2xl font-bold text-gray-900">Create Account</h1>
           <p className="text-gray-600 mt-2">Join our community of writers</p>
@@ -107,7 +107,7 @@ const Register = () => {
                 onClick={() => setShowPassword(!showPassword)}
                 className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500"
               >
-                {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
+                {/* {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />} */}
               </button>
             </div>
             {errors.password && (
@@ -136,7 +136,7 @@ const Register = () => {
                 onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                 className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500"
               >
-                {showConfirmPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
+                {/* {showConfirmPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />} */}
               </button>
             </div>
             {errors.confirmPassword && (

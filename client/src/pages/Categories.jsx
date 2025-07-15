@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Folder, FileText } from 'lucide-react';
+// import { Folder, FileText } from 'lucide-react';
 import { usePosts } from '../contexts/usePosts';
 import LoadingSpinner from '../components/common/LoadingSpinner';
 
@@ -26,7 +26,7 @@ const Categories = () => {
 
       {categories.length === 0 ? (
         <div className="text-center py-12">
-          <Folder className="h-16 w-16 text-gray-400 mx-auto mb-4" />
+          {/* <Folder className="h-16 w-16 text-gray-400 mx-auto mb-4" /> */}
           <h3 className="text-xl font-semibold text-gray-600 mb-2">No categories found</h3>
           <p className="text-gray-500">Categories will appear here once they are created.</p>
         </div>
@@ -42,7 +42,7 @@ const Categories = () => {
                 className="h-32 p-6 flex items-center justify-center group-hover:scale-105 transition-transform duration-300"
                 style={{ backgroundColor: category.color }}
               >
-                <Folder className="h-12 w-12 text-white" />
+                {/* <Folder className="h-12 w-12 text-white" /> */}
               </div>
               
               <div className="p-6">
@@ -58,7 +58,7 @@ const Categories = () => {
                 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-1 text-gray-500">
-                    <FileText className="h-4 w-4" />
+                    {/* <FileText className="h-4 w-4" /> */}
                     <span className="text-sm">
                       {category.postCount} {category.postCount === 1 ? 'post' : 'posts'}
                     </span>

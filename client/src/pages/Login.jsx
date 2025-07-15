@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-import { LogIn, Eye, EyeOff } from 'lucide-react';
+// import { LogIn, Eye, EyeOff } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 
 const Login = () => {
@@ -36,7 +36,7 @@ const Login = () => {
       <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-md">
         <div className="text-center mb-8">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-3 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-            <LogIn className="h-8 w-8 text-white" />
+            {/* <LogIn className="h-8 w-8 text-white" /> */}
           </div>
           <h1 className="text-2xl font-bold text-gray-900">Welcome Back</h1>
           <p className="text-gray-600 mt-2">Please sign in to your account</p>
@@ -87,7 +87,7 @@ const Login = () => {
                 onClick={() => setShowPassword(!showPassword)}
                 className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500"
               >
-                {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
+                {/* {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />} */}
               </button>
             </div>
             {errors.password && (
