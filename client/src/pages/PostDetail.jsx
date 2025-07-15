@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-// import { Calendar, User, Eye, MessageCircle, Tag, Edit, Trash2, ArrowLeft } from 'lucide-react';
+import { Calendar, User, Eye, MessageCircle, Tag, Edit, Trash2, ArrowLeft } from 'lucide-react';
 import { usePosts } from '../contexts/usePosts';
 import { useAuth } from '../contexts/AuthContext';
 import LoadingSpinner from '../components/common/LoadingSpinner';
